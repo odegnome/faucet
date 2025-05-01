@@ -37,7 +37,10 @@ app.get('/send/:address', async (req, res) => {
           sendTx(address).then(ret => {
             console.log('sent tokens to ', address)
             checker.update(address)
-            res.send({ result: ret })
+            const sanitizedRet = JSON.parse(JSON.stringify(ret, (key, value) => 
+              typeof value === 'bigint' ? value.toString() : value
+            ));
+            res.send({ result: sanitizedRet })
           });
         }else {
           res.send({ result: "You requested too often" })

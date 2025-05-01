@@ -9,31 +9,31 @@ export default {
     project: {
         name: "Ping Testnet",
         logo: "https://ping.pub/logo.svg",
-        deployer: `<a href="#">Your Brand</a>`
+        deployer: `<a href="#">Oblique</a>`
     },
     blockchain: {
         // make sure that CORS is enabled in rpc section in config.toml
         // cors_allowed_origins = ["*"]
-        rpc_endpoint: "https://rpc.sentry-02.theta-testnet.polypore.xyz",
+        rpc_endpoint: "http://localhost:26657",
 
     },
     sender: {
-        mnemonic: "surround miss nominee dream gap cross assault thank captain prosper drop duty group candy wealth weather scale put",
+        mnemonic: "fence code crash master claw hope private civil sugar various afraid measure visual rug true notable usual arctic bird mansion problem glimpse thumb deputy",
         option: {
             hdPaths: [stringToPath("m/44'/118'/0'/0/0")],
-            prefix: "cosmos"
+            prefix: "mantra"
         }
     },
     tx: {
         amount: {
-            denom: "uatom",
-            amount: "10000"
+            denom: "uom",
+            amount: "10000000"
         },
         fee: {
             amount: [
                 {
-                    amount: "1000",
-                    denom: "uatom"
+                    amount: "200000",
+                    denom: "uom"
                 }
             ],
             gas: "200000"
@@ -41,7 +41,7 @@ export default {
     },
     limit: {
         // how many times each wallet address is allowed in a window(24h)
-        address: 1, 
+        address: 10, 
         // how many times each ip is allowed in a window(24h),
         // if you use proxy, double check if the req.ip is return client's ip.
         ip: 10 
