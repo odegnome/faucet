@@ -25,8 +25,16 @@ export default {
         }
     },
     tx: {
-        amount: {
+        uom: {
             denom: "uom",
+            amount: "10000000"
+        },
+        uusdc: {
+            denom: "uusdc",
+            amount: "10000000"
+        },
+        uatom: {
+            denom: "uatom",
             amount: "10000000"
         },
         fee: {
